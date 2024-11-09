@@ -4,7 +4,8 @@ NAME = shello
 OBJ_DIR = obj
 # Libraries and compiler
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g -I/usr/local/opt/readline/include -fsanitize=address
+LDFLAGS = -L/usr/local/opt/readline/lib -lreadline
 LIBS = -lGL -lGLU -lglut
 RM = rm -f
 # Source and object files
