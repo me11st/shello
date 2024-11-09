@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/wait.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 /*---Macros---*/
 #define TOK_DELIM " \t\r\n\a\""
@@ -34,5 +36,8 @@ int own_cd(char **args);
 int own_exit(char **args);
 int own_env(char **args);
 int own_help(char **args);
+
+/*---history---*/
+char    *read_line(void);
 
 #endif
